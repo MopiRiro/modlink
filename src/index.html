@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ModLink</title>
+    <link rel="shortcut icon" href="./img/icon.png">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c26e936b31.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- CODE HERE -->
+    <header>
+      <nav class="main-nav">
+        <a class="main-tittle-nav" href="#">ポケットモンスター</a>
+        <div id="toggle-menu" class="toggle-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul id="main-menu" class="main-menu">
+          <li class="main-menu-item">
+            <a href="https://github.com/MopiRiro" class="main-menu-link">
+              Blog
+            </a>
+          </li>
+          <li class="main-menu-item">
+            <a href="https://www.linkedin.com/in/pilar-rivera-romero/" class="main-menu-link">
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+          <div id="sort" class="header-container">
+                <div class="content-search">
+                    <input type="text" class="searchBar" id="search-pokemon" placeholder="Buscar por nombre" />
+                    <button id ="button-search-pokemon"><span class="icon"><i class="fas fa-search"></i></span></button>
+                </div>
+
+                <div class="content-search">
+                    <input type="text" class="searchBar" id="search-pokemon-species" placeholder="Buscar por especie" />
+                    <button id ="button-search-pokemon-species"><span class="icon"><i class="fas fa-search"></i></span></button>
+                </div>              
+                
+                <div class="content-select">
+                  <select id="sortBy">
+                    <option selected>Ordenar por...</option>
+                    <option>A-Z</option>
+                    <option>Z-A</option>
+                  </select>                  
+                </div> 
+
+                <div>
+                  <button class="btnRefresh" onclick="window.location.reload()"><i class="fas fa-sync"></i></button>
+                </div>
+
+          </div>
+          <div class="container-pokemon" id="main-container"></div>
+            
+          <div class="container-pagination">
+            <nav class="navPagination">
+              <ul class="container-page-item">
+                  <li class="page-item" id="previous"><a class="page-link" href="#">Anterior</a></li>
+                  <li class="page-item" id="next"><a class="page-link" href="#">Siguiente</a></li>
+              </ul>
+
+            </nav>
+          </div>
+          
+
+    </main>
+    <footer>
+      <div class="container-footer">
+        <div class="box_footer">
+          <div class="logo">
+            <img src="./img/icon.png"/>
+          </div>
+        </div>
+        <div class="box_footer">
+          <h2>Redes sociales</h2>
+          <a href="https://www.linkedin.com/in/pilar-rivera-romero/" target="_blank"><i class="fab fa-linkedin"></i>Pilar Rivera</a>
+          <a href="https://github.com/MopiRiro" target="_blank"><i class="fab fa-github"></i>MopiRiro</a>
+        </div>
+        <div class="box_footer">
+          <h2>Front End Developer</h2>
+          <span>© 2022 Pilar Rivera. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+    <a class="button-float" href="https://github.com/MopiRiro" target="_blank">
+      <!-- <i class="fa-brands fa-github-square"></i> -->
+      <i class="fab fa-github"></i>
+    </a>
+    <script src="index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "modlink",
+  "version": "1.0.0",
+  "description": "You must design a similar page to the following [link](https://medlink.la/doctores)\r but using the following api [Pokemon API](https://pokeapi.co/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pokemonAPI"
+  ],
+  "author": "MopiRiro",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.13.0"
+  }
+}

@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+body header .main-nav {
+  background-color: #00cec9;
+  margin: 1 rem;
+}
+
+body header .main-nav .main-tittle-nav {
+  padding-top: 0.2rem;
+  padding-left: 1.5rem;
+  position: absolute;
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+body header .main-nav .toggle-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+body header .main-nav .toggle-menu .fas {
+  font-size: 1.2rem;
+}
+
+body header .main-nav .main-menu {
+  background-color: #00cec9;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .main-nav .main-menu .main-menu-item {
+  padding: .5rem;
+}
+
+body header .main-nav .main-menu .main-menu-item .main-menu-link {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  body header .main-nav .main-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+  }
+  body header .main-nav .main-tittle-nav {
+    padding-top: 0.5rem;
+  }
+  body header .main-nav .main-menu--show {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body header .main-nav .toggle-menu {
+    display: none;
+  }
+  body header .main-nav .main-menu {
+    margin-left: 20rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  body header .main-nav .main-menu .main-menu-item {
+    margin-left: 4rem;
+  }
+  body header .main-nav .main-tittle-nav {
+    padding-top: 1rem;
+    font-size: 1.5 rem;
+  }
+}
+
+body main .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  padding: 0.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+body main .header-container .content-search {
+  margin: 0.5rem 1rem;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+body main .header-container .content-search button {
+  position: absolute;
+  top: 5%;
+  margin-left: -3.5rem;
+  margin-top: 0.4rem;
+  z-index: 1;
+  border: none;
+  background: none;
+}
+
+body main .header-container .content-search button .icon {
+  color: #00cec9;
+  -webkit-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+body main .header-container .content-search .searchBar {
+  -webkit-box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+  margin: 0rem 2rem;
+  width: 16rem;
+  max-width: 100%;
+  height: 2.5rem;
+  background: White;
+  border: none;
+  font-size: 0.8rem;
+  float: left;
+  color: #069fe6;
+  padding-left: 1rem;
+  border-radius: 1.2rem;
+  color: #00cec9;
+}
+
+body main .header-container .content-select {
+  margin: 0.5rem 1rem;
+  position: relative;
+}
+
+body main .header-container .content-select select {
+  -webkit-box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 1.2rem;
+  background-color: white;
+  color: #00cec9;
+  height: 2.5rem;
+  width: 16rem;
+  border: none;
+  padding-left: 0.5rem;
+  font-size: 0.8rem;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
+  outline: none;
+}
+
+body main .header-container .content-select select option {
+  padding: 10rem;
+}
+
+body main .header-container .btnRefresh {
+  margin: 1rem 1.5rem;
+  border: none;
+  border-radius: 10rem;
+  background: #00cec9;
+  width: 2rem;
+  height: 2rem;
+  color: #FFFF;
+}
+
+@media screen and (max-width: 768px) {
+  body main .header-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .header-container .content-search .searchBar {
+    width: 12rem;
+    height: 2rem;
+  }
+  body main .header-container .content-select {
+    margin: 0.5rem 1rem;
+    position: relative;
+  }
+  body main .header-container .content-select select {
+    height: 2rem;
+    width: 13rem;
+  }
+  body main .header-container .btnRefresh {
+    position: absolute;
+    top: 10.7rem;
+    right: 1rem;
+  }
+}
+
+body main .container-pokemon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .container-pokemon .pokemon-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  -webkit-box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+body main .container-pokemon .pokemon-item .img-container {
+  background-image: url("./blob.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 6rem;
+}
+
+body main .container-pokemon .pokemon-item .btn-details {
+  border: none;
+  background-color: #00cec9;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+body main .container-pagination .navPagination .container-page-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .container-pagination .navPagination .container-page-item .page-item {
+  list-style: none;
+  width: 7rem;
+  height: 2rem;
+  background-color: #069fe6;
+  border-radius: 1.2rem;
+  text-align: center;
+  padding-top: 0.5rem;
+  margin: 1rem;
+}
+
+body main .container-pagination .navPagination .container-page-item .page-item .page-link {
+  text-decoration: none;
+  color: white;
+}
+
+body footer .container-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #069fe6;
+}
+
+body footer .container-footer .box_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+body footer .container-footer .box_footer .logo img {
+  width: 5rem;
+  margin: 2rem 0 0 5rem;
+}
+
+body footer .container-footer .box_footer h2 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+body footer .container-footer .box_footer span {
+  color: white;
+}
+
+body footer .container-footer .box_footer a {
+  text-decoration: none;
+  margin: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+body footer .container-footer .box_footer a i {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  body footer .container-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body footer .logo img {
+    display: none;
+  }
+}
+
+body .button-float {
+  text-decoration: none;
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 40rem;
+  font-size: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+body .button-float .fab {
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=styles.css.map */
