@@ -6,7 +6,9 @@
 
 body {
   height: 100vh;
-  background: #f4f4f4;
+  background-image: url("./img/pokemon-background.webp");
+  background-repeat: repeat;
+  background-position: center;
 }
 
 body header .main-nav {

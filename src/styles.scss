@@ -17,7 +17,9 @@ $medium: 768px;
 
 body{
    height: 100vh;
-   background: $tertiary-color;
+   background-image: url('./img/pokemon-background.webp');
+   background-repeat: repeat;
+   background-position: center;
    header{
       .main-nav{
          background-color: $secondary-color;

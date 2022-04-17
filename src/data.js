@@ -17,6 +17,7 @@ export const takePokemonByType = (url,type,container) => {
 			const namePokemons = data.pokemon.map( e => e.pokemon.name);
 			for(let i=0; i< namePokemons.length; i++){
 				takePokemon(url,namePokemons[i],container);
+				
 			}
 		});
 };
