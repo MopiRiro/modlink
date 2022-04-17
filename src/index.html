@@ -23,12 +23,12 @@
         </div>
         <ul id="main-menu" class="main-menu">
           <li class="main-menu-item">
-            <a href="https://github.com/MopiRiro" class="main-menu-link">
+            <a href="https://github.com/MopiRiro" class="main-menu-link" target="_blank">
               Blog
             </a>
           </li>
           <li class="main-menu-item">
-            <a href="https://www.linkedin.com/in/pilar-rivera-romero/" class="main-menu-link">
+            <a href="https://www.linkedin.com/in/pilar-rivera-romero/" class="main-menu-link" target="_blank">
               Contacto
             </a>
           </li>
@@ -43,25 +43,17 @@
                 </div>
 
                 <div class="content-search">
-                    <input type="text" class="searchBar" id="search-pokemon-species" placeholder="Buscar por especie" />
-                    <button id ="button-search-pokemon-species"><span class="icon"><i class="fas fa-search"></i></span></button>
+                    <input type="text" class="searchBar" id="search-pokemon-types" placeholder="Buscar por tipo" />
+                    <button id ="button-search-pokemon-types"><span class="icon"><i class="fas fa-search"></i></span></button>
                 </div>              
                 
-                <div class="content-select">
-                  <select id="sortBy">
-                    <option selected>Ordenar por...</option>
-                    <option>A-Z</option>
-                    <option>Z-A</option>
-                  </select>                  
-                </div> 
-
                 <div>
                   <button class="btnRefresh" onclick="window.location.reload()"><i class="fas fa-sync"></i></button>
                 </div>
 
           </div>
           <div class="container-pokemon" id="main-container"></div>
-            
+         
           <div class="container-pagination">
             <nav class="navPagination">
               <ul class="container-page-item">

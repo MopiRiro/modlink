@@ -5,6 +5,7 @@
 }
 
 body {
+  height: 100vh;
   background: #f4f4f4;
 }
 
@@ -112,8 +113,9 @@ body main .header-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: white;
   padding: 0.5rem;
   -ms-flex-wrap: wrap;
@@ -222,8 +224,8 @@ body main .header-container .btnRefresh {
   }
   body main .header-container .btnRefresh {
     position: absolute;
-    top: 10.7rem;
-    right: 1rem;
+    top: 7.8rem;
+    right: .5rem;
   }
 }
 
@@ -240,13 +242,16 @@ body main .container-pokemon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body main .container-pokemon .pokemon-item {
+body main .container-pokemon .pokemon-modal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 10rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -255,8 +260,55 @@ body main .container-pokemon .pokemon-item {
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  border-radius: 1rem;
+  width: auto;
+  padding: 2rem;
+  bottom: 35%;
+  margin: auto;
+  position: fixed;
+  z-index: 2;
+  -webkit-box-shadow: 10rem 10rem 1rem 100rem rgba(17, 17, 17, 0.8);
+          box-shadow: 10rem 10rem 1rem 100rem rgba(17, 17, 17, 0.8);
+  border-radius: 1.2rem;
+}
+
+body main .container-pokemon .pokemon-modal .img-container {
+  background-image: url("./blob.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 6rem;
+}
+
+body main .container-pokemon .pokemon-modal .btn-close {
   margin: 1rem;
+  border-color: #069fe6;
+  background-color: white;
+  -webkit-box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+body main .container-pokemon .pokemon-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 13rem;
+  height: 17rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 1rem 2.5rem;
   padding: 1rem;
   -webkit-box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -276,6 +328,30 @@ body main .container-pokemon .pokemon-item .btn-details {
   border-radius: 0.5rem;
   padding: 0.5rem;
   margin: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  body main .container-pokemon .pokemon-item {
+    width: 5rem;
+    height: 9rem;
+    margin: 1rem;
+  }
+  body main .container-pokemon .pokemon-item .img-container {
+    background-size: 4rem;
+  }
+  body main .container-pokemon .pokemon-item .img-container img {
+    width: 4.5rem;
+  }
+  body main .container-pokemon .pokemon-item .btn-details {
+    width: 4rem;
+    height: 1.5rem;
+    padding: 0.2rem;
+    margin: 0.2rem;
+  }
+}
+
+body main .container-pagination {
+  margin: 1rem;
 }
 
 body main .container-pagination .navPagination .container-page-item {
