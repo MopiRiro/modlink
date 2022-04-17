@@ -1,28 +1,28 @@
-export const fetchPokemon = (url,id,container) => {
+export const fetchPokemon = (url, id, container) => {
 	fetch(`${url}/${id}`)
 		.then(res => res.json())
-		.then((data) => createPokemon(url,data,container));
+		.then((data) => createPokemon(url, data, container));
 };
 
-export const takePokemon = (url, pokemon,container) => {
+export const takePokemon = (url, pokemon, container) => {
 	fetch(`${url}/${pokemon}`)
 		.then(res => res.json())
-		.then((data) => createPokemon(url,data,container));
+		.then((data) => createPokemon(url, data, container));
 };
 
-export const takePokemonByType = (url,type,container) => {
+export const takePokemonByType = (url, type, container) => {
 	fetch(`https://pokeapi.co/api/v2/type/${type}/`)
 		.then(res => res.json())
 		.then((data) => {
 			const namePokemons = data.pokemon.map( e => e.pokemon.name);
 			for(let i=0; i< namePokemons.length; i++){
-				takePokemon(url,namePokemons[i],container);
+				takePokemon(url, namePokemons[i], container);
 				
 			}
 		});
 };
 
-export const createPokemon = (url,pokemon,container) =>{
+export const createPokemon = (url, pokemon, container) =>{
 	const card = document.createElement('div');
 	card.classList.add('pokemon-item');
     
@@ -39,9 +39,8 @@ export const createPokemon = (url,pokemon,container) =>{
 	buttonDetails.classList.add('btn-details');
 	buttonDetails.setAttribute('id', pokemon.name);
 	buttonDetails.addEventListener('click', (e) => {
-		console.log(e.target.id);
 		const idPokemon = e.target.id;
-		infoPokemon(url, idPokemon,container);
+		infoPokemon(url, idPokemon, container);
 	});
 
 
@@ -50,7 +49,7 @@ export const createPokemon = (url,pokemon,container) =>{
 
 	const namePokemon = document.createElement('p');
 	namePokemon.classList.add('name');
-	namePokemon.textContent =pokemon.name;
+	namePokemon.textContent = pokemon.name;
 
 	card.appendChild(containerImageCard);
 	card.appendChild(numberPokemon);
@@ -67,7 +66,7 @@ export const infoPokemon = (url, namePokemon, container) => {
 };
 
 
-export const createdModal = (pokemon,container) =>{
+export const createdModal = (pokemon,container) => {
 	const modalContainer = document.createElement('div');
 	modalContainer.classList.add('pokemon-modal');
     
@@ -102,7 +101,7 @@ export const createdModal = (pokemon,container) =>{
 	const abilitiesPokemon = document.createElement('p');
 	abilitiesPokemon.classList.add('types_pokemon');
 	
-	abilitiesPokemon.textContent =`Habilidad:  ${pokemon.abilities[0].ability.name}`;
+	abilitiesPokemon.textContent = `Habilidad:  ${pokemon.abilities[0].ability.name}`;
 		
 	modalContainer.appendChild(containerImageCard);
 	modalContainer.appendChild(numberPokemon);

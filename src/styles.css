@@ -16,13 +16,31 @@ body header .main-nav {
   margin: 1 rem;
 }
 
-body header .main-nav .main-tittle-nav {
-  padding-top: 0.2rem;
+body header .main-nav .container-title-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 0.5rem;
   padding-left: 1.5rem;
   position: absolute;
+}
+
+body header .main-nav .container-title-nav .main-title-nav {
+  padding-top: 0.8rem;
+  padding-left: 1rem;
   color: white;
   font-size: 1.8rem;
   text-decoration: none;
+}
+
+body header .main-nav .container-title-nav .icon-nav {
+  padding-top: 0.7rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 body header .main-nav .toggle-menu {
@@ -36,15 +54,13 @@ body header .main-nav .toggle-menu {
 }
 
 body header .main-nav .toggle-menu .fas {
-  font-size: 1.2rem;
+  padding-top: .8rem;
+  font-size: 1.5rem;
 }
 
 body header .main-nav .main-menu {
   background-color: #00cec9;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +74,7 @@ body header .main-nav .main-menu {
 }
 
 body header .main-nav .main-menu .main-menu-item {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 body header .main-nav .main-menu .main-menu-item .main-menu-link {
@@ -166,32 +182,6 @@ body main .header-container .content-search .searchBar {
   color: #00cec9;
 }
 
-body main .header-container .content-select {
-  margin: 0.5rem 1rem;
-  position: relative;
-}
-
-body main .header-container .content-select select {
-  -webkit-box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
-  border-radius: 1.2rem;
-  background-color: white;
-  color: #00cec9;
-  height: 2.5rem;
-  width: 16rem;
-  border: none;
-  padding-left: 0.5rem;
-  font-size: 0.8rem;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-       appearance: button;
-  outline: none;
-}
-
-body main .header-container .content-select select option {
-  padding: 10rem;
-}
-
 body main .header-container .btnRefresh {
   margin: 1rem 1.5rem;
   border: none;
@@ -215,14 +205,6 @@ body main .header-container .btnRefresh {
   body main .header-container .content-search .searchBar {
     width: 12rem;
     height: 2rem;
-  }
-  body main .header-container .content-select {
-    margin: 0.5rem 1rem;
-    position: relative;
-  }
-  body main .header-container .content-select select {
-    height: 2rem;
-    width: 13rem;
   }
   body main .header-container .btnRefresh {
     position: absolute;
