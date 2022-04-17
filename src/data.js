@@ -83,7 +83,7 @@ export const createdModal = (pokemon,container) => {
 	buttonClose.textContent = 'Close';
 	buttonClose.classList.add('btn-close');
 	buttonClose.addEventListener('click', () => {
-		modalContainer .remove();
+		modalContainer.remove();
 	});
 
 	const numberPokemon = document.createElement('p');
@@ -91,11 +91,11 @@ export const createdModal = (pokemon,container) => {
 
 	const namePokemon = document.createElement('p');
 	namePokemon.classList.add('name');
-	namePokemon.textContent =pokemon.name;
+	namePokemon.textContent = pokemon.name;
 
 	const baseExperience = document.createElement('p');
 	baseExperience.classList.add('base_experience');
-	baseExperience.textContent =`Experiencia base: ${pokemon.base_experience}`;
+	baseExperience.textContent = `Experiencia base: ${pokemon.base_experience}`;
 
 	
 	const abilitiesPokemon = document.createElement('p');

@@ -26,12 +26,12 @@ previousBtn.addEventListener('click', () => {
 nextBtn.addEventListener('click', () => {
 	removeChildNodes(pokemonContainer);
 	offset += 9;	
-	fetchPokemons(offset,limit);
+	fetchPokemons(offset, limit);
 });
 
 
 const fetchPokemons = (offset, limit) =>{
-	for(let i=offset; i<= offset + limit; i ++){
+	for(let i = offset; i <= offset + limit; i ++){
 		fetchPokemon(url, i, pokemonContainer);
 	}
 };
@@ -41,11 +41,11 @@ fetchPokemons(offset,limit);
 buttonSearchPokemon.addEventListener('click', (e) => {
 	e.preventDefault();
 	let searchString = searchPokemon.value.toLowerCase();
-	previousBtn.style.display='none';
-	nextBtn.style.display='none';
+	previousBtn.style.display = 'none';
+	nextBtn.style.display = 'none';
 	if(searchString != ''){
 		removeChildNodes(pokemonContainer);
-		takePokemon(url,searchString,pokemonContainer);
+		takePokemon(url, searchString, pokemonContainer);
 		pokemonContainer.style.height = '100vh';
 		searchPokemon.value =''	;
 	} else {
@@ -58,12 +58,12 @@ buttonSearchPokemonTypes.addEventListener('click', (e) => {
 	let searchString = searchPokemonTypes.value.toLowerCase();
 	if(searchString != ''){
 		removeChildNodes(pokemonContainer);
-		takePokemonByType(url,searchString,pokemonContainer);
-		searchPokemonTypes.value ='';
+		takePokemonByType(url, searchString, pokemonContainer);
+		searchPokemonTypes.value = '';
 		pokemonContainer.style.height = '40rem';
 		pokemonContainer.style.overflow = 'scroll';
-		previousBtn.style.display='none';
-		nextBtn.style.display='none';
+		previousBtn.style.display = 'none';
+		nextBtn.style.display = 'none';
 	} else {
 		alert('Ingrese tipo');
 	}
